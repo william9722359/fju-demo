@@ -35,17 +35,17 @@ window.DEMO_SCRIPT = {
     next: "wei3"
   },
   wei3: {
-    text: "第一眼：感覺很凶。像是沒睡飽。",
+    text: "第一眼：感覺很兇。像是沒睡飽。",
     next: "wei4"
   },
   wei4: {
-    text: "蓬鬆的深藍短髮，髮尾微羦。眼鏡後面掛著淡淡的黑眼圈。\n制服穿得很好看。書包上吊著娃娃。",
+    text: "蓬鬆的深藍短髮，髮尾微翹。眼鏡後面掛著淡淡的黑眼圈。\n制服穿得很好看。書包上吊著娃娃。",
     next: "wei5"
   },
   wei5: {
     name: "劉赫",
     who: "you",
-    text: "「孿好。」",
+    text: "「妳好。」",
     next: "wei6"
   },
   wei6: {
@@ -76,7 +76,7 @@ window.DEMO_SCRIPT = {
     next: "wei_end"
   },
   wei_end: {
-    text: "真正變熟，是以後一起做作品的時候。\n一起燼夜、一起趕件、一起被退件。\n那條路，這份試玩還沒開放。",
+    text: "真正變熟，是以後一起做作品的時候。\n一起熬夜、一起趕件、一起被退件。\n那條路，這份試玩還沒開放。",
     next: "yang1"
   },
 
@@ -93,7 +93,7 @@ window.DEMO_SCRIPT = {
   yang2: {
     sprite: "yang",
     spriteClass: "bust",
-    text: "身高在人群裡特別顯眼。針織毛衣，深色，乾淨。\n她感了幾秒。",
+    text: "身高在人群裡特別顯眼。針織毛衣，深色，乾淨。\n她愣了幾秒。",
     next: "yang3"
   },
   yang3: {
@@ -132,7 +132,7 @@ window.DEMO_SCRIPT = {
   yang_mem3: {
     name: "楊詩寧",
     who: "yang",
-    text: "她當時笑著問：\n「孿還好嗎？」",
+    text: "她當時笑著問：\n「妳還好嗎？」",
     next: "yang_mem4"
   },
   yang_mem4: {
