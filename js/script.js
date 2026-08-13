@@ -3,7 +3,7 @@ window.DEMO_SCRIPT = {
     bg: "black",
     name: "指示",
     who: "sys",
-    chapter: "DEMO",
+    chapter: "序",
     text: "先確認一件事。\n你是劉赫。",
     next: "s2"
   },
@@ -22,7 +22,7 @@ window.DEMO_SCRIPT = {
 
   wei1: {
     bg: "classroom",
-    chapter: "指示 01　鄰座",
+    chapter: "第一話　隣席",
     sprite: null,
     name: "",
     who: "",
@@ -68,7 +68,7 @@ window.DEMO_SCRIPT = {
     ]
   },
   wei_more: {
-    text: "你又開了口。她沒有接。\n偶爾聊天，偶爾借東西——那是以後的事。",
+    text: "你又開了口。她沒有接。\n偶爾聊天，偶爾借東西，大概都是以後的事。",
     next: "wei_end"
   },
   wei_pass: {
@@ -76,7 +76,8 @@ window.DEMO_SCRIPT = {
     next: "wei_end"
   },
   wei_end: {
-    text: "真正變熟，是以後一起做作品的時候。\n一起熬夜、一起趕件、一起被退件。\n那條路，這份試玩還沒開放。",
+    sprite: null,
+    text: "下課鐘響。走廊開始有人跑。\n她已經在收筆。",
     next: "yang1"
   },
 
@@ -84,10 +85,10 @@ window.DEMO_SCRIPT = {
     bg: "campus",
     sprite: null,
     memory: false,
-    chapter: "指示 02　重逢",
+    chapter: "第二話　重逢",
     name: "",
     who: "",
-    text: "輔大的樹很高。風從教學樓中間穿過來。\n開學。校園裡有一個熟悉的身影。",
+    text: "輔大的樹很高。風從教學樓中間穿過來。\n校園裡有一個熟悉的身影。",
     next: "yang2"
   },
   yang2: {
@@ -186,9 +187,10 @@ window.DEMO_SCRIPT = {
   },
   yang_end: {
     sprite: null,
+    memory: false,
     name: "",
     who: "",
-    text: "她喜歡的是一起吃飯、散步、讀書、看展。\n她認為：喜歡一個人，就是想參與他的生活。\n那條陪伴的路，還沒開放。",
+    text: "樹蔭挪了一點。操場那邊有人在喊集合。\n白天到這裡先結束。",
     next: "jiang1"
   },
 
@@ -196,7 +198,7 @@ window.DEMO_SCRIPT = {
     bg: "room",
     sprite: null,
     memory: false,
-    chapter: "指示 03　語音",
+    chapter: "第三話　語音",
     name: "",
     who: "",
     text: "晚上。螢幕把房間切成一塊一塊的藍。\n同一款遊戲，長期組隊的人又上線了。",
@@ -221,14 +223,14 @@ window.DEMO_SCRIPT = {
     next: "jiang_choice"
   },
   jiang_choice: {
-    text: "以後才會問出那句「你讀哪間學校？」\n才會發現——也是輔大。",
+    text: "隊伍還在。罵聲也還在。",
     choices: [
       { text: "繼續跟她排", next: "jiang_more", flag: "jiang" },
       { text: "今天先下", next: "jiang_pass" }
     ]
   },
   jiang_more: {
-    text: "隊伍沒有散。罵聲還在，準星也還在。\n見面、一百四十九公分、還有那句「閉嘴」，都還在後面。",
+    text: "準星還亮著。她在耳機裡哼了一聲，沒有下線。",
     next: "jiang_end"
   },
   jiang_pass: {
@@ -240,14 +242,14 @@ window.DEMO_SCRIPT = {
     sprite: null,
     name: "",
     who: "",
-    text: "「所以你打算什麼時候告白？」\n那句話，這份試玩還不會讓她說出口。",
+    text: "夜還很長。螢幕暗下去之後，房間重新變回自己的。",
     next: "card"
   },
 
   card: {
     bg: "black",
     sprite: null,
-    chapter: "指示 04　冬季",
+    chapter: "第四話　冬季",
     name: "指示",
     who: "sys",
     text: "時間往前。\n學校第一次冬季大型展覽結束了。",
@@ -299,17 +301,13 @@ window.DEMO_SCRIPT = {
     name: "",
     who: "",
     text: "用很模糊的描述告白了。\n月台上只剩下車軌的風。",
-    next: "li_end"
+    next: "check_long"
   },
   li_pass: {
     name: "",
     who: "",
-    text: "車走了。那句羨慕沒有出口。\n她也沒有抱上來。兩個人並肩站著，什麼都沒有發生。",
-    next: "li_end"
-  },
-  li_end: {
     sprite: null,
-    text: "交往以後她會變成什麼樣子——秒讀、確認你在哪、以及更後面的事。\n這份試玩先不停在這裡。",
+    text: "車走了。那句羨慕沒有出口。\n她也沒有抱上來。兩個人並肩站著，什麼都沒有發生。",
     next: "check_long"
   },
 
@@ -338,26 +336,24 @@ window.DEMO_SCRIPT = {
     name: "阿龍陳",
     who: "long",
     text: "「時間差不多了。」",
-    next: "long3"
-  },
-  long3: {
-    name: "",
-    who: "",
-    text: "這不是告白。\n他的結局還不能走。",
     next: "ending"
   },
 
   ending: {
     bg: "dusk",
     sprite: null,
-    chapter: "DEMO 終",
+    chapter: "體驗版終",
     name: "指示",
     who: "sys",
-    text: "指示到這裡暫停。\n李侑禾、魏妍姻、姜雨婷、楊詩寧的個人線尚未實裝。",
+    text: "體驗版到此為止。\n共通線的開頭，你已經走完了。",
     next: "ending2"
   },
   ending2: {
-    text: "選擇已經記下。\n願望還是要你自己走完。",
+    text: "選擇已經記下。\n產品版會接著走完各自的路。",
+    next: "ending3"
+  },
+  ending3: {
+    text: "願望還是要你自己走完。",
     next: null
   }
 };
