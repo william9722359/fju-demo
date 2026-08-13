@@ -1,0 +1,36 @@
+name: import-assets
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/import.yml"
+      - "IMPORT_NOW"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch from live demo
+        run: |
+          set -eux
+          BASE="https://cheats-tree-treasure-brings.trycloudflare.com"
+          mkdir -p js css assets/bg assets/chara
+          curl -fsSL "$BASE/js/script.js" -o js/script.js
+          curl -fsSL "$BASE/js/engine.js" -o js/engine.js
+          curl -fsSL "$BASE/js/audio.js" -o js/audio.js
+          curl -fsSL "$BASE/js/assets-bg.js" -o js/assets-bg.js
+          curl -fsSL "$BASE/js/assets-chara.js" -o js/assets-chara.js
+          curl -fsSL "$BASE/css/style.css" -o css/style.css
+          curl -fsSL "$BASE/index.html" -o index.html
+          for f in classroom campus mrt room dusk; do
+            curl -fsSL "$BASE/assets/bg/$f.jpg" -o "assets/bg/$f.jpg"
+          done
+          for f in wei yang jiang li long; do
+            curl -fsSL "$BASE/assets/chara/$f.png" -o "assets/chara/$f.png"
+          done
+          ls -la js css assets/bg assets/chara
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Import playable demo files
